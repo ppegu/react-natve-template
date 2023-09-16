@@ -9,7 +9,10 @@ import {
 type Props = ViewProps & ViewStyle;
 
 export function View({ style, ...props }: Props) {
-  const defaultStyle: ViewStyle = { ...props };
+  const defaultStyle: ViewStyle = {
+    ...props,
+    backgroundColor: props.backgroundColor || 'transparent',
+  };
 
   return <DefaultView {...props} style={[style, defaultStyle]} />;
 }

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Center } from 'src/theme/View';
-import { Text } from './theme/Text';
+import Navigation from './navigation';
+import { View } from './theme/View';
+import { BACKGROUND_COLOR } from './utils/color.util';
 
 export default function App() {
   return (
-    <Center>
-      <Text>hello world</Text>
-    </Center>
+    <View flex={1} backgroundColor={BACKGROUND_COLOR}>
+      <Navigation />
+    </View>
   );
 }
