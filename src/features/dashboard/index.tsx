@@ -1,11 +1,11 @@
 import React from 'react';
+import Container from 'src/components/Container';
 import { Text } from 'src/theme/Text';
-import { View } from 'src/theme/View';
 
 export default function DashboardScreen() {
   return (
-    <View>
+    <Container>
       <Text>Dashboard</Text>
-    </View>
+    </Container>
   );
 }

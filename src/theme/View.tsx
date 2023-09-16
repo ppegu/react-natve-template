@@ -1,14 +1,13 @@
 import React from 'react';
 import {
   View as DefaultView,
-  ViewProps,
-  StyleProp,
+  ViewProps as DefaultViewProps,
   ViewStyle,
 } from 'react-native';
 
-type Props = ViewProps & ViewStyle;
+export type ViewProps = DefaultViewProps & ViewStyle;
 
-export function View({ style, ...props }: Props) {
+export function View({ style, ...props }: ViewProps) {
   const defaultStyle: ViewStyle = {
     ...props,
     backgroundColor: props.backgroundColor || 'transparent',
@@ -17,7 +16,7 @@ export function View({ style, ...props }: Props) {
   return <DefaultView {...props} style={[style, defaultStyle]} />;
 }
 
-export function Center({ children, ...rest }: Props) {
+export function Center({ children, ...rest }: ViewProps) {
   return (
     <View flex={1} justifyContent="center" alignItems="center" {...rest}>
       {children}
@@ -25,7 +24,7 @@ export function Center({ children, ...rest }: Props) {
   );
 }
 
-export function Row({ children, ...rest }: Props) {
+export function Row({ children, ...rest }: ViewProps) {
   return (
     <View flex={1} flexDirection="row" {...rest}>
       {children}
