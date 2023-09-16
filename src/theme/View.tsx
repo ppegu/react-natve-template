@@ -26,7 +26,7 @@ export function Center({ children, ...rest }: ViewProps) {
 
 export function Row({ children, ...rest }: ViewProps) {
   return (
-    <View flex={1} flexDirection="row" {...rest}>
+    <View flexDirection="row" {...rest}>
       {children}
     </View>
   );

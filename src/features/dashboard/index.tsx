@@ -1,11 +1,16 @@
 import React from 'react';
 import Container from 'src/components/Container';
-import { Text } from 'src/theme/Text';
+import { View } from 'src/theme/View';
+import Header from './Header';
+import HomeBanners from './Banners';
+import { hp } from 'src/theme/responsive';
 
 export default function DashboardScreen() {
   return (
     <Container>
-      <Text>Dashboard</Text>
+      <Header />
+      <View marginTop={hp('10%')} />
+      <HomeBanners />
     </Container>
   );
 }
